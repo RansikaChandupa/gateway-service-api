@@ -13,6 +13,9 @@ public class GatewayConfig {
                 .route("hotel-management-service-api",
                         r -> r.path("/hotel-management/**")
                                 .uri("http://localhost:8081"))
+                .route("auth-service-api",
+                        r -> r.path("/user-service/**")
+                                .uri("http://localhost:8082"))
                 .build();
     }
 }
